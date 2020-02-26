@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "declaration": true,
+    "inlineSources": true,
+    "types": [],
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  },
+	"files": [
+		"second.mfe.ts"
+	],
+	"angularCompilerOptions": {
+		"enableIvy": true,
+    "skipTemplateCodegen": false,
+    "strictMetadataEmit": true,
+    "enableResourceInlining": true
+  }
+}

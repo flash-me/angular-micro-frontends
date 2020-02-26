@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular Micro Frontends</title>
+		<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.3/custom-elements-es5-adapter.js"></script>
+		<script src="node_modules/zone.js/dist/zone.min.js"></script>
+		<script src="node_modules/rxjs/bundles/rxjs.umd.min.js"></script>
+		<script src="node_modules/@angular/core/__ivy_ngcc__/bundles/core.umd.js"></script>
+		<script src="node_modules/@angular/common/__ivy_ngcc__/bundles/common.umd.js"></script>
+		<script src="node_modules/@angular/platform-browser/__ivy_ngcc__/bundles/platform-browser.umd.js"></script>
+		<script src="node_modules/@angular/elements/__ivy_ngcc__/bundles/elements.umd.js"></script>
+	</head>
+	<body>
+		<mfe-one></mfe-one>
+
+		<script src="dist/shared/bundles/angular-mfe-shared.umd.js"></script>
+		<script src="dist/first/bundles/angular-mfe-first.umd.js"></script>
+	</body>
+</html>
