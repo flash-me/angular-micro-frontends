@@ -1,21 +1,16 @@
 {
-	"$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "@angular-mfe/second",
   "version": "1.0.0",
-  "peerDependencies": {
-    "@angular/common": "^9.0.2",
-    "@angular/core": "^9.0.2",
-    "tslib": "^1.10.0"
-  },
-	"ngPackage": {
-		"dest": "../../dist/second",
-		"lib": {
-			"entryFile": "./second.mfe.ts",
-			"umdId": "mfe.second",
-			"umdModuleIds": {
-				"@angular-mfe/shared": "mfe.shared"
-			}
-		},
-		"deleteDestPath": true
-	}
+  "ngPackage": {
+    "dest": "../../dist/second",
+    "lib": {
+      "entryFile": "./second.mfe.ts",
+      "umdId": "mfe.second",
+      "umdModuleIds": {
+        "@angular-mfe/shared": "mfe.shared"
+      }
+    },
+    "deleteDestPath": true
+  }
 }

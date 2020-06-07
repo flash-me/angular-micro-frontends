@@ -1,5 +1,4 @@
-import {Component, DoBootstrap, Injectable, Injector, NgModule, Type} from '@angular/core';
-import {createCustomElement} from '@angular/elements';
+import {Component, Injectable, NgModule, Type} from '@angular/core';
 
 @Injectable({providedIn: 'platform'})
 export class SharedMfe {
@@ -13,20 +12,11 @@ export class SharedMfe {
   }
 }
 
-@Component({template: 'Shared Component', selector: 'mfe-shared'})
+@Component({template: 'Shared Component', selector: 'shared-component'})
 export class SharedComponent { }
 
 @NgModule({
   declarations: [SharedComponent],
   exports: [SharedComponent]
 })
-export class SharedMfeModule implements DoBootstrap {
-  constructor(private injector: Injector) {}
-
-  public ngDoBootstrap(): void {
-    customElements.define(
-      'mfe-shared',
-      createCustomElement(SharedComponent, {injector: this.injector})
-    )
-  }
-}
+export class SharedMfeModule { }

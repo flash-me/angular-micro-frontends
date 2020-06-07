@@ -1,21 +1,16 @@
 {
-	"$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "@angular-mfe/first",
   "version": "1.0.0",
-  "peerDependencies": {
-    "@angular/common": "^9.0.2",
-    "@angular/core": "^9.0.2",
-    "tslib": "^1.10.0"
-  },
-	"ngPackage": {
-		"dest": "../../dist/first",
-		"lib": {
-			"entryFile": "./first.mfe.ts",
-			"umdId": "mfe.first",
-			"umdModuleIds": {
-				"@angular-mfe/shared": "mfe.shared"
-			}
-		},
-		"deleteDestPath": true
-	}
+  "ngPackage": {
+    "dest": "../../dist/first",
+    "lib": {
+      "entryFile": "./first.mfe.ts",
+      "umdId": "mfe.first",
+      "umdModuleIds": {
+        "@angular-mfe/shared": "mfe.shared"
+      }
+    },
+    "deleteDestPath": true
+  }
 }

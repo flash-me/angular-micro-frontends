@@ -1,4 +1,4 @@
-# ![Micro Frontends Logo](mfe_logo.png) Angular Micro Frontends
+# ![Micro Frontends Logo](demo/mfe_logo.png) Angular Micro Frontends
 
 ### Proof of concept with pure angular toolchain
 

@@ -1,18 +1,13 @@
 {
-	"$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "@angular-mfe/shared",
   "version": "1.0.0",
-  "peerDependencies": {
-    "@angular/common": "^9.0.2",
-    "@angular/core": "^9.0.2",
-    "tslib": "^1.10.0"
-  },
-	"ngPackage": {
-		"dest": "../../dist/shared",
-		"lib": {
-			"entryFile": "./shared.mfe.ts",
-			"umdId": "mfe.shared"
-		},
-		"deleteDestPath": true
-	}
+  "ngPackage": {
+    "dest": "../../dist/shared",
+    "lib": {
+      "entryFile": "./shared.mfe.ts",
+      "umdId": "mfe.shared"
+    },
+    "deleteDestPath": true
+  }
 }

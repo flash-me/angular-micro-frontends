@@ -4,7 +4,7 @@ import {BrowserModule, platformBrowser} from '@angular/platform-browser';
 import {createCustomElement} from '@angular/elements';
 
 @Component({
-  template: `<p>First Angular Micro Frontend</p> <p><mfe-shared></mfe-shared></p>`
+  template: `<p>First Angular Micro Frontend</p> <p><shared-component></shared-component></p>`
 })
 export class FirstMfe {
   constructor(private sharedMfe: SharedMfe) {
