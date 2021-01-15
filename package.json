@@ -7,29 +7,35 @@
     "url": "https://twitter.com/simsek_dev"
   },
   "scripts": {
-    "ng": "ng",
-    "first": "ng run mfe:build:first",
-    "second": "ng run mfe:build:second",
-    "shared": "ng run mfe:build:shared",
-    "postinstall": "ngcc --properties main es2015"
+    "postinstall": "ngcc --properties es2015",
+    "bundle": "rollup -c rollup.config.js",
+    "first": "ng-packagr -p projects/first/package.json -c projects/first/tsconfig.json",
+    "second": "ng-packagr -p projects/second/package.json -c projects/second/tsconfig.json",
+    "shared": "ng-packagr -p projects/shared/package.json -c projects/shared/tsconfig.json",
+    "first:watch": "npm run first -- -w",
+    "second:watch": "npm run second -- -w",
+    "shared:watch": "npm run shared -- -w",
+    "serve": "live-server demo --mount=/dist:./dist --mount=/node_modules:./node_modules"
   },
-  "browserslist": ["Chrome > 75"],
+  "browserslist": [
+    "Chrome > 80"
+  ],
   "private": true,
   "dependencies": {
-    "@angular/common": "~9.1.9",
-    "@angular/compiler": "~9.1.9",
-    "@angular/core": "~9.1.9",
-    "@angular/elements": "~9.1.9",
-    "@angular/platform-browser": "~9.1.9",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "@angular/common": "~11.1.0-rc.0",
+    "@angular/compiler": "~11.1.0-rc.0",
+    "@angular/core": "~11.1.0-rc.0",
+    "@angular/elements": "~11.1.0-rc.0",
+    "@angular/platform-browser": "~11.1.0-rc.0",
+    "rxjs": "6.6.0",
+    "tslib": "~2.0.0",
+    "zone.js": "~0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.7",
-    "@angular-devkit/build-ng-packagr": "~0.901.7",
-    "@angular/cli": "~9.1.7",
-    "@angular/compiler-cli": "~9.1.9",
-    "ng-packagr": "~9.1.5",
-    "typescript": "~3.8.3"
+    "@angular/compiler-cli": "~11.1.0-rc.0",
+    "live-server": "1.2.1",
+    "ng-packagr": "~11.0.3",
+    "rollup-plugin-terser": "7.0.2",
+    "typescript": "4.1.2"
   }
 }

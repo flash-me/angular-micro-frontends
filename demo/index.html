@@ -3,9 +3,32 @@
 <head>
   <meta charset="utf-8">
   <title>Foo</title>
-  <base href="/">
+  <base>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="demo/mfe_logo.png">
+  <link rel="icon" type="image/x-icon" href="mfe_logo.png">
+	<script defer src="https://unpkg.com/es-module-shims@0.8.0/dist/es-module-shims.min.js"></script>
+	<script type="importmap-shim">
+		{
+			"imports": {
+				"zone.js": "/dist/bundle.js",
+				"rxjs": "/dist/bundle.js",
+				"rxjs/operators": "/dist/bundle.js",
+				"@angular/core": "/dist/bundle.js",
+				"@angular/common": "/dist/bundle.js",
+				"@angular/platform-browser": "/dist/bundle.js",
+				"@angular/elements": "/dist/bundle.js",
+				"@angular-mfe/shared": "/dist/shared/fesm2015/angular-mfe-shared.js",
+				"@angular-mfe/first": "/dist/first/fesm2015/angular-mfe-first.js",
+				"@angular-mfe/second": "/dist/second/fesm2015/angular-mfe-second.js"
+			}
+		}
+	</script>
+	<script type="module-shim">
+		import "zone.js";
+		import "@angular-mfe/shared";
+		import "@angular-mfe/first";
+		import "@angular-mfe/second";
+	</script>
 </head>
 <body>
 
