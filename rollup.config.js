@@ -10,7 +10,7 @@ export default {
 	preserveSymlinks: true,
 	treeshake: false,
 	output: {
-		file: 'dist/rxjs.js',
+		file: 'dist/bundle.js',
 		format: 'es',
 	},
 	plugins: [
