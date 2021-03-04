@@ -22,20 +22,20 @@
   ],
   "private": true,
   "dependencies": {
-    "@angular/common": "~11.1.0-rc.0",
-    "@angular/compiler": "~11.1.0-rc.0",
-    "@angular/core": "~11.1.0-rc.0",
-    "@angular/elements": "~11.1.0-rc.0",
-    "@angular/platform-browser": "~11.1.0-rc.0",
-    "rxjs": "6.6.0",
-    "tslib": "~2.0.0",
-    "zone.js": "~0.11.3"
+    "@angular/common": "~11.2.4",
+    "@angular/compiler": "~11.2.4",
+    "@angular/core": "~11.2.4",
+    "@angular/elements": "~11.2.4",
+    "@angular/platform-browser": "~11.2.4",
+    "rxjs": "~6.6.6",
+    "tslib": "^2.1.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "~11.1.0-rc.0",
+    "@angular/compiler-cli": "~11.2.4",
     "live-server": "1.2.1",
-    "ng-packagr": "~11.0.3",
-    "rollup-plugin-terser": "7.0.2",
-    "typescript": "4.1.2"
+    "ng-packagr": "~11.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "~4.1.5"
   }
 }
