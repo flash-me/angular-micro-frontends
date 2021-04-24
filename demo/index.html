@@ -2,37 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Foo</title>
-  <base>
+  <title>Micro Frontends with ESM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="mfe_logo.png">
-	<script defer src="https://unpkg.com/es-module-shims@0.8.0/dist/es-module-shims.min.js"></script>
-	<script type="importmap-shim">
+</head>
+<body>
+	<host-mfe></host-mfe>
+</body>
+	<script type="importmap">
 		{
 			"imports": {
-				"zone.js": "/dist/bundle.js",
-				"rxjs": "/dist/bundle.js",
-				"rxjs/operators": "/dist/bundle.js",
-				"@angular/core": "/dist/bundle.js",
-				"@angular/common": "/dist/bundle.js",
-				"@angular/platform-browser": "/dist/bundle.js",
-				"@angular/elements": "/dist/bundle.js",
+				"rxjs": "https://cdn.skypack.dev/rxjs",
+				"rxjs/operators": "https://cdn.skypack.dev/rxjs/operators",
+				"@angular/core": "/node_modules/@angular/core/fesm2015/core.js",
+				"@angular/common": "/node_modules/@angular/common/fesm2015/common.js",
+				"@angular/platform-browser": "/node_modules/@angular/platform-browser/fesm2015/platform-browser.js",
 				"@angular-mfe/shared": "/dist/shared/fesm2015/angular-mfe-shared.js",
 				"@angular-mfe/first": "/dist/first/fesm2015/angular-mfe-first.js",
-				"@angular-mfe/second": "/dist/second/fesm2015/angular-mfe-second.js"
+				"@angular-mfe/second": "/dist/second/fesm2015/angular-mfe-second.js",
+				"@angular-mfe/host": "/dist/host/fesm2015/angular-mfe-host.js"
 			}
 		}
 	</script>
-	<script type="module-shim">
-		import "zone.js";
-		import "@angular-mfe/shared";
-		import "@angular-mfe/first";
-		import "@angular-mfe/second";
-	</script>
-</head>
-<body>
+	<script type="module" src="https://cdn.skypack.dev/zone.js@0.11.4"></script>
+	<script type="module">
+		import {platformBrowser} from "@angular/platform-browser";
+		import {ModuleMfeModule} from  "@angular-mfe/host";
 
-	<mfe-one></mfe-one>
-	<mfe-two></mfe-two>
-</body>
+		platformBrowser().bootstrapModule(ModuleMfeModule);
+	</script>
 </html>

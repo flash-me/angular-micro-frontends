@@ -5,11 +5,7 @@
   "ngPackage": {
     "dest": "../../dist/second",
     "lib": {
-      "entryFile": "./second.mfe.ts",
-      "umdId": "mfe.second",
-      "umdModuleIds": {
-        "@angular-mfe/shared": "mfe.shared"
-      }
+      "entryFile": "./second.mfe.ts"
     },
     "deleteDestPath": true
   }

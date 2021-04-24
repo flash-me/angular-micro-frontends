@@ -1,25 +1,21 @@
-import {SharedMfe} from '@angular-mfe/shared';
-import {Component, DoBootstrap, Injector, NgModule, getPlatform} from '@angular/core';
-import {BrowserModule, platformBrowser} from '@angular/platform-browser';
-import {createCustomElement} from '@angular/elements';
+import {SharedMfe, SharedMfeModule} from '@angular-mfe/shared';
+import {Component, NgModule} from '@angular/core';
 
-@Component({template: 'Second Angular Micro Frontend'})
-export class SecondMfe {
+export const id = 'SecondMfeModule';
+
+@Component({
+  selector: 'second-mfe',
+  template: 'Second Angular Micro Frontend'
+})
+export class EntryComponent {
   constructor(private sharedMfe: SharedMfe) {
-    sharedMfe.registerMfe('MFE-TWO', SecondMfe);
+    sharedMfe.registerMfe('MFE-TWO', EntryComponent);
   }}
 
 @NgModule({
-  declarations: [SecondMfe],
-  imports: [BrowserModule]
+  id,
+  declarations: [EntryComponent],
+  imports: [SharedMfeModule]
 })
-export class SecondMfeModule implements DoBootstrap {
-  constructor(private injector: Injector) {}
-
-  public ngDoBootstrap(): void {
-    customElements.define('mfe-two',
-      createCustomElement(SecondMfe, {injector: this.injector}))
-  }
+export class SecondMfeModule {
 }
-
-(getPlatform() || platformBrowser()).bootstrapModule(SecondMfeModule).catch(err => console.log(err));

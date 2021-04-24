@@ -1,11 +1,11 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
-  "name": "@angular-mfe/first",
+  "name": "@angular-mfe/host",
   "version": "1.0.0",
   "ngPackage": {
-    "dest": "../../dist/first",
+    "dest": "../../dist/host",
     "lib": {
-      "entryFile": "./first.mfe.ts"
+      "entryFile": "./host.mfe.ts"
     },
     "deleteDestPath": true
   }

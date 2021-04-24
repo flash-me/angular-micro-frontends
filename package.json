@@ -3,39 +3,33 @@
   "version": "1.0.0",
   "author": {
     "email": "adem@simsek.dev",
-    "name": "Adem Simsek",
-    "url": "https://twitter.com/simsek_dev"
+    "name": "Adem Simsek"
   },
   "scripts": {
     "postinstall": "ngcc",
-    "bundle": "rollup -c rollup.config.js",
     "first": "ng-packagr -p projects/first/package.json -c projects/first/tsconfig.json",
     "second": "ng-packagr -p projects/second/package.json -c projects/second/tsconfig.json",
     "shared": "ng-packagr -p projects/shared/package.json -c projects/shared/tsconfig.json",
+    "host": "ng-packagr -p projects/host/package.json -c projects/host/tsconfig.json",
     "first:watch": "npm run first -- -w",
     "second:watch": "npm run second -- -w",
     "shared:watch": "npm run shared -- -w",
+    "host:watch": "npm run host -- -w",
     "serve": "live-server demo --mount=/dist:./dist --mount=/node_modules:./node_modules"
   },
   "browserslist": [
-    "Chrome > 80"
+    "Chrome > 89"
   ],
   "private": true,
   "dependencies": {
-    "@angular/common": "~11.2.4",
-    "@angular/compiler": "~11.2.4",
-    "@angular/core": "~11.2.4",
-    "@angular/elements": "~11.2.4",
-    "@angular/platform-browser": "~11.2.4",
-    "rxjs": "~6.6.6",
-    "tslib": "^2.1.0",
-    "zone.js": "~0.11.4"
+    "@angular/compiler": "~11.2.11",
+    "@angular/core": "~11.2.11",
+    "@angular/platform-browser": "~11.2.11"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "~11.2.4",
+    "@angular/compiler-cli": "~11.2.11",
     "live-server": "1.2.1",
     "ng-packagr": "~11.2.4",
-    "rollup-plugin-terser": "^7.0.2",
     "typescript": "~4.1.5"
   }
 }
