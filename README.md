@@ -6,7 +6,7 @@ Example repository and boilerplate to build *__real micro frontends__* with angu
 
 ### How this repository differs from the bullsh!t examples in the WWW?
 
-> [Micro Frontends in its essence](https://github.com/angular/angular-cli/issues/20056#issuecomment-781899902) means being able to <br> build, compile, load and use frontends that work **independently**. <br>
+> Micro Frontends in its essence means being able to <br> build, compile, load and use frontends that work **independently**. <br>
 It **must be** possible to include micro frontends on runtime without configuration change. <br>
 This also means that including a micro frontend **must not** involve recompilation <br>
 > 
@@ -90,6 +90,7 @@ This approach requires a bit more knowledge in [importmaps](https://github.com/W
 1. The angular packages are published in partially compilation mode. For this approach the fully compilation is required. This is done by using `@babel/cli` together with the `@angular/compiler-cli/linker/babel` plugin
 2. rxjs does not provide FESM formats and somehow bugs with the exports, so we make use of skypack (Thank you folks!)
 3. ESM cannot be loaded from the filesystem, therefore we need to start a local webserver (e.g. live-server)
+4. FESM2020 is not compatible out of the box with zone.js when using `async await`. Therefore FESM2015 bundles are used to avoid issues. Thanks @petebacondarwin for this [crucial information](https://github.com/angular/angular/issues/43716#issuecomment-934628526)  
 
 Cheers
 
