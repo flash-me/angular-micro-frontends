@@ -5,8 +5,7 @@
   "ngPackage": {
     "dest": "../../dist/shared",
     "lib": {
-      "entryFile": "./shared.mfe.ts",
-      "umdId": "mfe.shared"
+      "entryFile": "./shared.mfe.ts"
     },
     "deleteDestPath": true
   }

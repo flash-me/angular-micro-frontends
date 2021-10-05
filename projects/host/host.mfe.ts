@@ -1,4 +1,11 @@
-import {Component, getModuleFactory, Injector, NgModule, ViewChild, ViewContainerRef} from '@angular/core';
+import {
+  Component,
+  createNgModuleRef,
+  Injector,
+  NgModule,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {SharedMfeModule} from '@angular-mfe/shared';
 
@@ -25,11 +32,11 @@ export class HostMfeComponent {
   loadMfe(path: string): void {
     import(path).then(mfe =>
       this.vc.createComponent(
-        getModuleFactory(mfe.id)
-          .create(this.injector)
+        createNgModuleRef(mfe.ngModule, this.injector)
           .componentFactoryResolver
           .resolveComponentFactory(mfe.EntryComponent)
-      ))
+      )
+    )
   }
 }
 

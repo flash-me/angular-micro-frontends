@@ -1,8 +1,6 @@
 import {SharedMfe, SharedMfeModule} from '@angular-mfe/shared';
 import {Component, NgModule} from '@angular/core';
 
-export const id = 'FirstMfeModule';
-
 @Component({
   selector: 'first-mfe',
   template: `
@@ -19,9 +17,10 @@ export class EntryComponent {
 }
 
 @NgModule({
-  id,
   declarations: [EntryComponent],
   imports: [SharedMfeModule]
 })
 export class FirstMfeModule {
 }
+
+export const ngModule = FirstMfeModule;

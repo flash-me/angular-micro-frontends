@@ -24,7 +24,7 @@ Enjoy it. Or not. It's up to you.
    ([also ESM, which is basically used to create the other formats](https://github.com/ng-packagr/ng-packagr/blob/master/src/lib/ng-package/entry-point/write-bundles.transform.ts#L46))
 4. We could make use of UMD, but it's deprecated, so we stick with ESM.
 
-A curcial step is to compile your node_modules with `ngcc` (which is done in this repo as a postinstall step).
+A curcial step is to "link" the angular packages in fully compilation mode. (which is done in this repo as a postinstall step).
 It is also important to build your micro frontends with ivy. This is required, so a runtime compilation is not necessary anymore.
 
 Basically
@@ -87,7 +87,7 @@ Take a break and think about it.
 ### Drawbacks
 
 This approach requires a bit more knowledge in [importmaps](https://github.com/WICG/import-maps) which landed in Chrome 89, but <br>
-1. The angular packages by now are not published with ivy code
+1. The angular packages are published in partially compilation mode. For this approach the fully compilation is required. This is done by using `@babel/cli` together with the `@angular/compiler-cli/linker/babel` plugin
 2. rxjs does not provide FESM formats and somehow bugs with the exports, so we make use of skypack (Thank you folks!)
 3. ESM cannot be loaded from the filesystem, therefore we need to start a local webserver (e.g. live-server)
 
