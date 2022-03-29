@@ -4,14 +4,14 @@
 
 Example repository and boilerplate to build *__real micro frontends__* with angular.
 
-### How this repository differs from the bullsh!t examples in the WWW?
+### How this repository differs from the examples in the WWW?
 
 > Micro Frontends in its essence means being able to <br> build, compile, load and use frontends that work **independently**. <br>
 It **must be** possible to include micro frontends on runtime without configuration change. <br>
 This also means that including a micro frontend **must not** involve recompilation <br>
 > 
 > Otherwise it is just lazy loading with some overhead. <br>
-> But since we all live in a free world, everyone can call all the crap however one wants to. 
+> But since we all live in a free world, everyone can call all the stuff however one wants to. 
 
 Enjoy it. Or not. It's up to you.
 
@@ -42,8 +42,8 @@ npm run host
 
 So you just build the host application (sometimes called "shell")
 
-*Now comes the part where you see what __REAL MICRO FRONTENDS__  are of <br>
-and not the bullsh!t you can find all over the WWW.*
+*Now comes the part where you see what these micro frontends are of <br>
+and not like the examples you can find all over the WWW.*
 
 
 ```
@@ -57,7 +57,7 @@ Now type in your browser console
 hostMfe.loadMfe("@angular-mfe/first");
 ```
 This will load the just compiled micro frontend bundle. <br>
-**and creates an instance of it, ON RUNTIME**
+**and creates an instance of it, on runtime!**
 
 You should see in the console following output
 ```html
